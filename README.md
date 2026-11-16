@@ -1,28 +1,17 @@
 # Tugas Rutin 3 - Kalkulator IP Semester
 
 ## Identitas
-- Nama: M. Faris Al Rafiq
+- Nama: M. FARIS AL RAFIQ
 - NIM: 4241250001
-- Kelas: PSIK 24 C
-- Mata kuliah: Pemrograman Mobile (3KOM40215)
+- Kelas: PSIK24C
 
 ## Tangkapan Layar
-![Sesi program](sesi.png)
+![Sesi program](screenshot/sesi.png)
 
 ## Penjelasan
-Higher-order function saya pakai di beberapa tempat. Di `hitungIp`, `fold`
-menjumlahkan total SKS dan total poin (SKS x bobot) untuk menghitung IP. Di
-`cetakKhs`, `where` menyaring mata kuliah berbobot di bawah 2 dan `map`
-mengambil namanya, sedangkan `sort` dengan fungsi pembanding mengurutkan KHS
-dari nilai tertinggi. Fungsi pembanding itu berupa fungsi anonim yang dikirim
-sebagai argumen.
+Higher-order function saya gunakan pada beberapa bagian program. Di hitungIp, fold berfungsi menjumlahkan seluruh SKS dan poin nilai (SKS x bobot) sebagai dasar perhitungan IP. Pada cetakKhs, where digunakan untuk memilih mata kuliah dengan bobot di bawah 2, kemudian map mengambil nama mata kuliah tersebut. Selanjutnya, sort dengan fungsi pembanding mengurutkan KHS berdasarkan nilai tertinggi. Fungsi pembanding tersebut merupakan fungsi anonim yang diberikan sebagai argumen.
 
-Untuk error handling, fungsi `validasiSks` dan `validasiNilai` melempar
-`FormatException` bila SKS bukan angka 1-6 atau nilai bukan A-E. Exception
-tersebut ditangkap di `main` dengan `try/on FormatException`, sehingga data
-yang salah hanya diabaikan dan program tetap berjalan. Dengan begitu fungsi
-validasi cukup fokus memeriksa, sedangkan pesan ke pengguna ditangani di satu
-tempat.
+Untuk menangani error, fungsi validasiSks dan validasiNilai melempar FormatException apabila SKS yang dimasukkan bukan angka 1-6 atau nilai yang dimasukkan bukan A-E. Exception tersebut kemudian ditangkap di main menggunakan try/on FormatException. Dengan cara ini, data yang salah akan dilewati dan program tetap berjalan. Jadi, fungsi validasi cukup bertugas memeriksa data, sedangkan pesan untuk pengguna ditangani di satu tempat.
 
 ## Penggunaan AI
 Saya memakai Claude untuk membantu menyusun kerangka kode dan README. Saya
